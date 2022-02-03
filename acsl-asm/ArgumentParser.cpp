@@ -38,8 +38,8 @@ arguments parse_args(int argc, char** argv) {
 
 			fs::path path(argv[i]);
 
-			if (!path.has_extension() || path.extension().string() != ".exe") {
-				cerr << "Invalid extension \"" << path.extension().string() << "\". Please specify a path with extension \".exe\"" << endl;
+			if (!path.has_extension() || (path.extension().string() != ".bin" && path.extension().string() != ".exe")) {
+				cerr << "Invalid extension \"" << path.extension().string() << "\". Please specify a path with extension \".bin\" or \".exe\"" << endl;
 				args.error = true;
 				return args;
 			}
