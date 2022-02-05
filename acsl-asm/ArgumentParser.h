@@ -6,9 +6,9 @@ namespace fs = std::filesystem;
 
 struct arguments {
 	fs::path input;
-	fs::path cpp;
+	fs::path c;
 	fs::path bin;
-	bool output_cpp = false;
+	bool output_c = false;
 	bool output_bin = false;
 	bool error = false;
 };

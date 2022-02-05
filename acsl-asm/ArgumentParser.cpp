@@ -20,14 +20,14 @@ arguments parse_args(int argc, char** argv) {
 
 			fs::path path(argv[i]);
 
-			if (!path.has_extension() || path.extension().string() != ".cpp") {
-				cerr << "Invalid extension \"" << path.extension().string() << "\". Please specify a path with extension \".cpp\"" << endl;
+			if (!path.has_extension() || (path.extension().string() != ".c" && path.extension().string() != ".cpp")) {
+				cerr << "Invalid extension \"" << path.extension().string() << "\". Please specify a path with extension \".c\" or \".cpp\"" << endl;
 				args.error = true;
 				return args;
 			}
 
-			args.output_cpp = true;
-			args.cpp = path;
+			args.output_c = true;
+			args.c = path;
 		}
 		else if (strcmp(argv[i], "-bin") == 0) {
 			if (++i == argc) {
