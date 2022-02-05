@@ -11,7 +11,8 @@ arguments parse_args(int argc, char** argv) {
 	bool input_set = false;
 
 	for (int i = 1; i < argc; i++) {
-		if (strcmp(argv[i], "-c") == 0) {
+		if (strcmp(argv[i], "-n") == 0) args.execute = false;
+		else if (strcmp(argv[i], "-c") == 0) {
 			if (++i == argc) {
 				cerr << "Please specify an output file." << endl;
 				args.error = true;

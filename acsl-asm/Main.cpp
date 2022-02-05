@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 
 	if (!args.output_c) remove(c_file.string().c_str());
 
-	system(bin_file.string().c_str());
+	if (args.execute) system(bin_file.string().c_str());
 
 	if (!args.output_bin) remove(bin_file.string().c_str());
 }

@@ -8,5 +8,9 @@ This compiler is for assembly files in the ACSL format. It can convert asm files
 | Option (* are required) | Flag | Description                                             |
 | ----------------------- | ---- | ------------------------------------------------------- |
 | *Input File             |      | Specify the input file with extension ".asm"            |
+| Prevent execution       | -n   | Prevents the program from automatically executing.      |
 | Compile to a C++ file   | -c   | Specify the output file with extension ".c" or ".cpp"   |
 | Compile to a binary file| -bin | Specify the output file with extension ".bin" or ".exe" |
+
+## License
+This code is licensed under the [MIT License](./LICENSE).
